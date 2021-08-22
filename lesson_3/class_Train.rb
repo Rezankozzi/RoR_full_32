@@ -5,7 +5,6 @@ class Train
     @number = number
     @type = type
     @wagons_count = wagons_count
-    @speed = 0
   end
 
   def accelrate(volue)
