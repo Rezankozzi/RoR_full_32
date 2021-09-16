@@ -89,7 +89,6 @@ class Train_interface
     end
   end
 
-
   def entry
     @selected_train = nil
     loop do
@@ -102,5 +101,4 @@ class Train_interface
       end
     end
   end
-
 end
