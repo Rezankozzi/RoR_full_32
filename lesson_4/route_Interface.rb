@@ -1,7 +1,7 @@
 class Route_interface < Train_interface
 
   ROUTE_INTERFACE = ["\nМеню операций с маршрутом:",
-                     "\nСоздать новый маршрут--' create '",
+                     "\nСоздать новый маршрут--'create'",
                      "Добавить станцию в  маршрут--'add'",
                      "Удалить станцию из маршрута--'delete'",
                      "Выйти из меню--'exit'"]
@@ -66,11 +66,3 @@ class Route_interface < Train_interface
     end
   end
 end
-
-
-
-
-
-
-
-
