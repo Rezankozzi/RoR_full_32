@@ -6,7 +6,7 @@ class Train
   attr_reader  :speed, :wagons, :current_station, :name, :type, :route
 
   NUMBER_FORMAT = /^[\w^_]{3}-?[\w^_]{2}$/
-
+  TYPE_FORMAT = [:cargo, :passenger]
   @@trains = []
 
   def initialize(number, type)
@@ -75,8 +75,10 @@ class Train
   private
 
   def validate!
-  raise "Number has invalid format!"  if @number !~ NUMBER_FORMAT
-  raise "Type has invalid format!" if [:cargo, :passenger].include?(@type) == false
+    errors = []
+    errors << "Number has invalid format!"  if @number !~ NUMBER_FORMAT
+    errors << "Type has invalid format!" if TYPE_FORMAT.include?(@type) == false
+    raise errors.join(' ') unless errors.empty?
   end
 
   def current_station
