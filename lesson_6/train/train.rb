@@ -4,10 +4,10 @@ class Train
   include Validation
 
   attr_reader  :speed, :wagons, :current_station, :name, :type, :route
-
-  NUMBER_FORMAT = /^[\w^_]{3}-?[\w^_]{2}$/
-  TYPE_FORMAT = [:cargo, :passenger]
+  
   @@trains = []
+  NUMBER_FORMAT = /^[\w^_]{3}-?[\w^_]{2}$/
+  TYPE_FORMAT = [:cargo, :passenger]  
 
   def initialize(number, type)
     @number = number
