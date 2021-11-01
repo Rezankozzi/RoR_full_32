@@ -37,8 +37,8 @@ class Interface
   def make_choise
     choise = input_user("Введите номер пункта меню:")
     return choise if choise == "exit"
-    hash_with_metod = @menu.find {|item| item[:index] == choise.to_i }
-    hash_with_metod[:action]
+    hash_with_method = @menu.find {|item| item[:index] == choise.to_i }
+    hash_with_method[:action]
   end
 
   def get_menu(key)
