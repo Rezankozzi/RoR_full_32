@@ -1,14 +1,19 @@
 class Wagon
   include Manufacturer
   include Validation
-  attr_reader :type, :number
+  attr_reader :type, :number, :capacity, :unavailable_capacity
 
   NUMBER_FORMAT =/^WG-\d{3}$/
 
-  def initialize(number,type)
+  def initialize(number, capacity)
+    @unavailable_capacity = 0
     @number = number
-    @type = type
+    @capacity = capacity
     validate!
+  end
+
+  def available_capacity
+    @capacity - @unavailable_capacity
   end
 
   private
