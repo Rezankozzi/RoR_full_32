@@ -16,5 +16,5 @@ module DataInterface
                       { index: 3, title: "удалить станцию из маршрута", action: :delete_station }],
                 4 => [{ index: 1, title: "Создать вагон", action: :create_wagon },
                       { index: 2, title: "Занять место в вагоне", action: :take_a_seat },
-                      { index: 3, title: "Занять объем в вагоне", action: :unavailable_capacity }]}
+                      { index: 3, title: "Занять объем в вагоне", action: :load_wagon }]}
 end
