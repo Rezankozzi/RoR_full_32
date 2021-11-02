@@ -25,8 +25,8 @@ module WagonInterface
     select_wagon(:passenger).take_a_seat
   end
 
-  def unavailable_capacity
-    volue = input_user("Введите объем загрузки:").to_i
-    select_wagon(:cargo).unavailable_capacity=(volue)
+  def load_wagon
+    load = input_user("Введите объем загрузки:").to_i
+    select_wagon(:cargo).load_wagon(load)
   end
 end
