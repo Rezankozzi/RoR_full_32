@@ -5,11 +5,11 @@ class PassengerWagon < Wagon
   end
 
   def take_a_seat
-    @unavailable_capacity +=1
+    self.loaded_capacity += 1
   end
 
   def info
-    "Номер: #{@number}  тип: #{@type}" +
-      "свободных мест: #{self.available_capacity}  занятых мест: #{@unavailable_capacity}"
+    "Номер: #{@number}  тип: #{@type}  " +
+      "свободных мест: #{available_capacity}  занятых мест: #{@loaded_capacity}"
   end
 end
